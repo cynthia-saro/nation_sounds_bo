@@ -27,9 +27,9 @@ class Festival
     private $description;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string", length=150)
      */
-    private $date;
+    private $dates;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -65,14 +65,14 @@ class Festival
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDates(): ?string
     {
         return $this->date;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setDates(string $dates): self
     {
-        $this->date = $date;
+        $this->date = $dates;
 
         return $this;
     }
