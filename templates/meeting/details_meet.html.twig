@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de la rencontre{% endblock %}
+
+{% block body %}
+    <h1>Détails de la rencontre avec : {{meet_artist.artist.name}}</h1>
+     <img src="{{meet_artist.artist.picture}}">
+    <p>Début de la rencontre: {{meet_artist.beginning|date('d/m/Y H:i')}}</p>
+    <p>Fin de la rencontre: {{meet_artist.ending|date('d/m/Y H:i')}}</p>
+
+    <a href="{{ path('meet_artists') }}">Retour</a>
+{% endblock %}

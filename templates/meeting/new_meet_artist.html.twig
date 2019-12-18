@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une nouvelle rencontre{% endblock %}
+
+{% block body %}
+ <h1>Ajouter une rencontre</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.artist, {'label':'Artiste'}) }}
+        {{ form_row(form.beginning, {'label':'Date de début'}) }}
+        {{ form_row(form.ending, {'label':'Date de fin'}) }}
+        <button type="submit">Ajouter la rencontre</button>
+    {{ form_end(form) }}
+    <a href="{{ path('meet_artists') }}">Retour</a>
+
+{% endblock %}
