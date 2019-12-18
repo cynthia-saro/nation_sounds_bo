@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste de actualités{% endblock %}
+
+{% block body %}
+<a href="{{path('new_actuality')}}">Ajouter une actualité</a>
+    <h1>Les actualités</h1>
+    <table>
+        <thead>
+            <tr>
+                <td><b>Annonce(s) atualité(s)</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for actuality in actualities %}
+                <tr>
+                    <td>{{actuality.title}}</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="{{ path('update_actuality',{'id':actuality.id}) }}">MODIFIER</a>
+                                </td>
+                                <td>
+                                    <a href="{{ path('delete_actuality',{'id':actuality.id}) }}">SUPPRIMER</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

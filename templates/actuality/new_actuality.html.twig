@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une actualité{% endblock %}
+
+{% block body %}
+
+    <h1>Nouvelle actualité</h1>
+
+    {# décomposition par ligne #}
+    {{ form_start(actualityform) }}
+
+        {{ form_label(actualityform.title) }}
+        {{ form_widget(actualityform.title) }}
+        {{ form_errors(actualityform.title) }}
+
+       
+        <button type="submit">Envoyer</button>
+    {{ form_end(actualityform) }}
+
+    <input type="button" value="Retour" onclick="history.back()">
+{% endblock %}

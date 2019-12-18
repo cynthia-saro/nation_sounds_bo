@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 18 déc. 2019 à 14:37
--- Version du serveur :  5.7.23
--- Version de PHP :  7.2.10
+-- Généré le :  mer. 18 déc. 2019 à 09:47
+-- Version du serveur :  5.7.21
+-- Version de PHP :  5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,26 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `nation_sounds`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `actuality`
---
-
-DROP TABLE IF EXISTS `actuality`;
-CREATE TABLE IF NOT EXISTS `actuality` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `actuality`
---
-
-INSERT INTO `actuality` (`id`, `title`) VALUES
-(1, 'test');
 
 -- --------------------------------------------------------
 
@@ -119,9 +99,7 @@ CREATE TABLE IF NOT EXISTS `migration_versions` (
 INSERT INTO `migration_versions` (`version`, `executed_at`) VALUES
 ('20191217132830', '2019-12-17 13:31:06'),
 ('20191217142601', '2019-12-17 14:26:27'),
-('20191217164704', '2019-12-17 16:48:44'),
-('20191218113944', '2019-12-18 14:30:44'),
-('20191218114223', '2019-12-18 14:30:44');
+('20191217164704', '2019-12-17 16:48:44');
 
 -- --------------------------------------------------------
 
@@ -153,21 +131,6 @@ CREATE TABLE IF NOT EXISTS `seance` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_DF7DFD0EB7970CF8` (`artist_id`),
   KEY `IDX_DF7DFD0E46BBBF21` (`id_scene_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `security_info`
---
-
-DROP TABLE IF EXISTS `security_info`;
-CREATE TABLE IF NOT EXISTS `security_info` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
