@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\FestivalRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\SecurityInfoRepository")
  */
-class Festival
+class SecurityInfo
 {
     /**
      * @ORM\Id()
@@ -17,9 +17,9 @@ class Festival
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=150)
+     * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -27,28 +27,23 @@ class Festival
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=150)
-     */
-    private $dates;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
-    private $address;
+    private $link;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getTitle(): ?string
     {
-        return $this->name;
+        return $this->title;
     }
 
-    public function setName(string $name): self
+    public function setTitle(string $title): self
     {
-        $this->name = $name;
+        $this->title = $title;
 
         return $this;
     }
@@ -65,26 +60,14 @@ class Festival
         return $this;
     }
 
-    public function getDates(): ?string
+    public function getLink(): ?string
     {
-        return $this->date;
+        return $this->link;
     }
 
-    public function setDates(string $dates): self
+    public function setLink(string $link): self
     {
-        $this->date = $dates;
-
-        return $this;
-    }
-
-    public function getAddress(): ?string
-    {
-        return $this->address;
-    }
-
-    public function setAddress(string $address): self
-    {
-        $this->address = $address;
+        $this->link = $link;
 
         return $this;
     }

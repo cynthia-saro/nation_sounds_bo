@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualités{% endblock %}
+
+{% block body %}
+    <div>L'atualité : {{actuality.title}}</div>
+    <a href="{{ path('actualities') }}">Retour</a>
+{% endblock %}
