@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artists details{% endblock %}
+
+{% block body %}
+
+
+    <h1>Nouvel Artiste</h1>
+
+    {# décomposition par ligne #}
+    {{ form_start(artistform) }}
+
+        {{ form_label(artistform.name) }}
+        {{ form_widget(artistform.name) }}
+        {{ form_errors(artistform.name) }}
+
+        {{ form_label(artistform.picture) }}
+        {{ form_widget(artistform.picture) }}
+        {{ form_errors(artistform.picture) }}
+
+        {{ form_label(artistform.category) }}
+        {{ form_widget(artistform.category) }}
+        {{ form_errors(artistform.category) }}
+
+        {{ form_label(artistform.description) }}
+        {{ form_widget(artistform.description) }}
+        {{ form_errors(artistform.description) }}
+
+       
+        <button type="submit">Envoyer</button>
+    {{ form_end(artistform) }}
+
+    <input type="button" value="Retour" onclick="history.back()">
+
+
+{% endblock %}

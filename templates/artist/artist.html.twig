@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artiste{% endblock %}
+
+{% block body %}
+    <h1>Nom de l'artiste : {{artist.name}}</h1>
+    <img src="{{artist.picture}}">
+    <div>Genre : {{artist.category}}</div>
+    <div class="descriptionArtist">{{artist.description}}</div>
+    <a href="{{ path('artists') }}">Retour</a>
+{% endblock %}
