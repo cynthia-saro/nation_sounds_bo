@@ -7,10 +7,14 @@
     <div class="navbar">
         <a href="{{ path('artists') }}">Les artistes</a>
         <a href="{{ path('securityinfos') }}">Les infos de sécurités</a>
-        <a href="{{ path('actualities') }}">Les acutalités</a>
+        <a href="{{ path('actualities') }}">Les actualités</a>
+        <a href="{{ path('scenes') }}">Les scènes</a> 
+        <a href="{{ path('seances_artists') }}">Les séances</a> 
+        <a href="{{ path('meet_artists') }}">Les rencontres</a> 
     </div>
-    <a href="{{path('new_artist')}}" class="submit-artist">Ajouter un artiste</a>
+    
     <h1 class="h1-artist">Les artistes</h1>
+    <a href="{{path('new_artist')}}" class="submit-artist">Ajouter un artiste</a>
     <table>
         <thead>
             <tr class="title-artist">

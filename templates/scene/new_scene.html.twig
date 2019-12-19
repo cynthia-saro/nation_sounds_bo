@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle scène{% endblock %}
+
+{% block body %}
+
+
+    <h1 class="h1-newscène">Nouvelle scène</h1>
+
+<div class="new-sceneist">
+    {# décomposition par ligne #}
+    {{ form_start(sceneform) }}
+    <div class="name-newscene">
+        {{ form_label(sceneform.name) }}
+        {{ form_widget(sceneform.name) }}
+        {{ form_errors(sceneform.name) }}
+    </div>
+        <button type="submit" class="submit">Envoyer</button>
+    {{ form_end(sceneform) }}
+
+    <input type="button" value="Retour" onclick="history.back()" class="submit">
+
+
+{% endblock %}

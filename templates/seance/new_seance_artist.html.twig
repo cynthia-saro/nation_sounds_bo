@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une nouvelle séance{% endblock %}
+
+{% block body %}
+ <h1>Ajouter une séance</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.artist, {'label':'Artiste'}) }}
+        {{ form_row(form.beginning, {'label':'Heure de début'}) }}
+        {{ form_row(form.ending, {'label':'Heure de fin'}) }}
+        {{ form_row(form.date, {'label':'Date'}) }}
+        {{ form_row(form.idScene, {'label':'Scène'}) }}
+        <button type="submit">Ajouter la séance</button>
+    {{ form_end(form) }}
+    <a href="{{ path('seances_artists') }}">Retour</a>
+
+{% endblock %}
