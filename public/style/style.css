@@ -1,9 +1,43 @@
+/* NAVBAR */
+
+
+.navbar {
+    margin-right: 0px !important;
+    list-style-type: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding-left : 50px;
+    padding-top:20px;
+    padding-bottom:15px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align:left;
+    color: rgba(0, 0, 0, 0.92);
+    border: 1px solid black;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-weight: 750;
+    border-radius: 20px;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+
+
+
+
+
+/* ________________________________________________________________________ */
+
 /* 
 
         Page de Connexion 
 
 */
     
+
+
+
     .body-connexion {
         position: relative;
         box-sizing: border-box;
@@ -48,7 +82,7 @@
         text-transform: uppercase;
     }
 
-
+/* ________________________________________________________________________ */
 
 
 
@@ -58,6 +92,8 @@
         Page Artistes 
 
 */
+
+
 
 table {
 
@@ -78,9 +114,10 @@ td {
 }
 
 .submit-artist {
-    text-align:left;
         color: rgba(0, 0, 0, 0.92);
-        padding: 6px 16px;
+        display: block;
+        margin : auto;
+        padding: 4px;
         font-size: 0.875rem;
         min-width: 64px;
         border: 1px solid black;
@@ -89,7 +126,6 @@ td {
         font-weight: 700;
         line-height: 1.5rem;
         border-radius: 4px;
-        text-transform: uppercase;
 }
 
 
@@ -131,18 +167,29 @@ td {
 }
 
 
+
+/* ________________________________________________________________________ */
+
+
 /*
 
 Page New Artist
 
 */
 
-.submit {
+
+
+
+.submit-artist {
     text-align:left;
+    display: block;
+    margin : auto;
+    margin-top: 10px;
         color: rgba(0, 0, 0, 0.92);
-        padding: 6px 16px;
+        padding-left: 6px;
         font-size: 0.875rem;
         min-width: 64px;
+        text-align: center;
         box-sizing: border-box;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         font-family: Montserrat;
@@ -153,19 +200,19 @@ Page New Artist
 }
 
 .new-artist {
-    font-family: "Montserrat",sans-serif;
+        font-family: "Montserrat",sans-serif;
         color: currentColor;
-        width: 100%;
-        border: 5px;
+        display: flex;
+        justify-content: space-around;
         height: 1.1875em;
         margin: 50px;
-        display: block;
         padding: 6px 0 7px;
         min-width: 0;
         background: none;
         box-sizing: content-box;
         animation-name: MuiInputBase-keyframes-auto-fill-cancel;
         -webkit-tap-highlight-color: transparent;
+<<<<<<< Updated upstream
         white-space:normal;border:2px solid;
 }
 
@@ -230,3 +277,23 @@ button{
     display:flex;
     
 }
+=======
+        white-space:normal;
+        border:2px solid;
+}
+
+.h1-newartist {
+    font-family: "Montserrat",sans-serif;
+        color: currentColor;
+        width: 100%;
+        border: 5px;
+        height: 1.1875em;
+        margin-left: 200px;
+        padding: 6px 0 7px;
+        min-width: 0;
+        background: none;
+        box-sizing: content-box;
+        text-decoration:underline;
+}
+
+>>>>>>> Stashed changes

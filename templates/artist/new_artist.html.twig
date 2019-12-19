@@ -10,30 +10,27 @@
 <div class="new-artist">
     {# décomposition par ligne #}
     {{ form_start(artistform) }}
-    <div class="name-newartist">
         {{ form_label(artistform.name) }}
         {{ form_widget(artistform.name) }}
         {{ form_errors(artistform.name) }}
-    </div>
-    <div class="picture-newartist">
+
         {{ form_label(artistform.picture) }}
         {{ form_widget(artistform.picture) }}
         {{ form_errors(artistform.picture) }}
-    </div>
-    <div class="category-newartist">
+    
         {{ form_label(artistform.category) }}
         {{ form_widget(artistform.category) }}
         {{ form_errors(artistform.category) }}
-    </div>
-    <div class="description-newartist">
+    
         {{ form_label(artistform.description) }}
         {{ form_widget(artistform.description) }}
         {{ form_errors(artistform.description) }}
-    </div>
-        <button type="submit" class="submit">Envoyer</button>
+        
+</div>
+        <button type="submit" class="submit-artist">Envoyer</button>
     {{ form_end(artistform) }}
 
-    <input type="button" value="Retour" onclick="history.back()" class="submit">
+    <input type="button" value="Retour" onclick="history.back()" class="submit-artist">
 
 
 {% endblock %}
