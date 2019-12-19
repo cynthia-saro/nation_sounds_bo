@@ -3,7 +3,12 @@
 {% block title %}Informations de sécurité{% endblock %}
 
 {% block body %}
-<a href="{{path('new_securityinfo')}}">Ajouter une info de sécurité</a>
+    <div class="navbar">
+        <a href="{{ path('artists') }}">Les artistes</a>
+        <a href="{{ path('securityinfos') }}">Les infos de sécurités</a>
+        <a href="{{ path('actualities') }}">Les acutalités</a>
+    </div>
+    <a href="{{path('new_securityinfo')}}">Ajouter une info de sécurité</a>
     <h1>Les infos :</h1>
     <table>
         <thead>

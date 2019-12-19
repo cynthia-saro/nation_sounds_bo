@@ -14,7 +14,6 @@ class SecurityInfoType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('link')
         ;
     }
 

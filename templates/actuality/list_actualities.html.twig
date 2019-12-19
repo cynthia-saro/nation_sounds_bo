@@ -3,7 +3,12 @@
 {% block title %}Liste de actualités{% endblock %}
 
 {% block body %}
-<a href="{{path('new_actuality')}}">Ajouter une actualité</a>
+    <div class="navbar">
+        <a href="{{ path('artists') }}">Les artistes</a>
+        <a href="{{ path('securityinfos') }}">Les infos de sécurités</a>
+        <a href="{{ path('actualities') }}">Les acutalités</a>
+    </div>
+    <a href="{{path('new_actuality')}}">Ajouter une actualité</a>
     <h1>Les actualités</h1>
     <table>
         <thead>

@@ -4,7 +4,12 @@
 
 {% block body %}
 
-<a href="{{path('new_artist')}}" class="submit-artist">Ajouter un artiste</a>
+    <div class="navbar">
+        <a href="{{ path('artists') }}">Les artistes</a>
+        <a href="{{ path('securityinfos') }}">Les infos de sécurités</a>
+        <a href="{{ path('actualities') }}">Les acutalités</a>
+    </div>
+    <a href="{{path('new_artist')}}" class="submit-artist">Ajouter un artiste</a>
     <h1 class="h1-artist">Les artistes</h1>
     <table>
         <thead>
