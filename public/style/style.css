@@ -168,3 +168,65 @@ Page New Artist
         -webkit-tap-highlight-color: transparent;
         white-space:normal;border:2px solid;
 }
+
+
+/*
+
+Page New Meet Artist
+
+*/
+
+.newmeeth1{
+    font-family: "Montserrat",sans-serif;
+    font-size: 25px;
+}
+
+.textnewmeet{
+    font-family:"Montserrat",sans-serif;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.artistN{
+    padding:0.600rem;
+}
+
+.beginningN{
+    padding:0.600rem;
+}
+
+.endingN{
+    padding:0.600rem;
+}
+
+.buttonN{
+    padding:0.600rem;
+}
+
+.retourN{
+    margin:0.800rem;
+}
+
+.button{
+    background-color:grey ;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Montserrat",sans-serif;
+    border-radius:5px;
+    color: white;
+    font-size: 12px;
+}
+button{
+    background-color: blue ;
+    padding: 5px;
+    text-decoration: none;
+    font-family: "Montserrat",sans-serif;
+    border-radius:5px;
+    color: white;
+    font-size: 12px;
+}
+
+.twobuttons{
+    display:flex;
+    
+}

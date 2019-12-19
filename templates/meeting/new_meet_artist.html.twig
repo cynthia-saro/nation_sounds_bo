@@ -3,14 +3,37 @@
 {% block title %}Ajouter une nouvelle rencontre{% endblock %}
 
 {% block body %}
- <h1>Ajouter une rencontre</h1>
+ <h1 class='newmeeth1'>Ajouter une rencontre</h1>
+
+ <div class='textnewmeet'>
 
     {{ form_start(form) }}
+
+    <div class= 'artistN'>
         {{ form_row(form.artist, {'label':'Artiste'}) }}
+    </div>
+
+    <div class='beginningN'>
         {{ form_row(form.beginning, {'label':'Date de début'}) }}
+    </div>
+
+    <div class='endingN'>
         {{ form_row(form.ending, {'label':'Date de fin'}) }}
-        <button type="submit">Ajouter la rencontre</button>
+    </div>
+
+</div>
+
+<div class='twobuttons'>
+
+<div class= 'buttonN'>
+        <button type="submitN">Ajouter la rencontre</button>
     {{ form_end(form) }}
-    <a href="{{ path('meet_artists') }}">Retour</a>
+</div>
+
+<div class='retourN'>
+    <a href="{{ path('meet_artists') }}" class='button'>Retour</a>
+</div>
+
+</div>
 
 {% endblock %}
