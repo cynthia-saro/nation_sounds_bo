@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MeetingController extends AbstractController
 {
     /**
-     * @Route("/rencontres_artistes/json", name="meet_artists_json")
+     * @Route("/meet_artists/json", name="meet_artists_json")
      */
     public function meet_artists_json()
     {
@@ -30,7 +30,7 @@ class MeetingController extends AbstractController
     }
 
     /**
-     * @Route("/rencontres_artistes", name="meet_artists")
+     * @Route("/meet_artists", name="meet_artists")
      */
     public function meet_artists()
     {
@@ -48,7 +48,7 @@ class MeetingController extends AbstractController
     }
 
     /**
-     * @Route("/rencontre_artiste/detail/{id}",name="details_meet")
+     * @Route("/meet_artists/detail/{id}",name="details_meet")
      */
     public function meet_artist(int $id)
     {
@@ -70,7 +70,7 @@ class MeetingController extends AbstractController
     }
 
     /**
-     * @Route("/rencontre_artiste/modifier/{id}",name="update_meet_artist")
+     * @Route("/meet_artists/modifier/{id}",name="update_meet_artist")
      */
     public function update_meet_artist(int $id,Request $request, EntityManagerInterface $manager){
         $repository = $this
@@ -115,7 +115,7 @@ class MeetingController extends AbstractController
     }
 
     /**
-     * @Route("/rencontre_artiste/supprimer/{id}",name="delete_meet_artist")
+     * @Route("/meet_artists/supprimer/{id}",name="delete_meet_artist")
      */
     public function deleteMeetArtist($id, EntityManagerInterface $manager){
         $repository = $this
@@ -141,7 +141,7 @@ class MeetingController extends AbstractController
     }
 
     /**
-     * @Route("/rencontre_artiste/new",name="new_meet_artist")
+     * @Route("/meet_artists/new",name="new_meet_artist")
      */
     public function new_meet_artist(Request $request, EntityManagerInterface $manager){
         $meet_artist=new Meeting();

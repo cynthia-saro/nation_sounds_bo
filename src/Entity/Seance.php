@@ -38,7 +38,7 @@ class Seance
     private $idScene;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Artist", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity="App\Entity\Artist", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $artist;

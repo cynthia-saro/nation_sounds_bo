@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste de actualités{% endblock %}
+{% block title %}Liste scène{% endblock %}
 
 {% block body %}
+
     <div class="navbar">
         <a href="{{ path('artists') }}">Les artistes</a>
         <a href="{{ path('securityinfos') }}">Les infos de sécurités</a>
@@ -12,26 +13,24 @@
         <a href="{{ path('meet_artists') }}">Les rencontres</a> 
     </div>
     
-    <h1>Les actualités</h1>
-    <a href="{{path('new_actuality')}}">Ajouter une actualité</a>
+    <h1 class="h1-scene">Les scènes</h1>
+    <a href="{{path('new_scene')}}" class="submit-scene">Ajouter une scene</a>
     <table>
         <thead>
-            <tr>
-                <td><b>Annonce(s) atualité(s)</b></td>
+            <tr class="title-scene">
+                <td>Nom</td>
+                <td>Actions</td>
             </tr>
         </thead>
         <tbody>
-            {% for actuality in actualities %}
+            {% for scene in scenes %}
                 <tr>
-                    <td>{{actuality.title}}</td>
+                    <td class="scene-name">{{scene.name}}</td>
                     <td>
-                        <table>
-                            <tr>
+                        <table class="action-bouton">
+                            <tr class="action-bouton">
                                 <td>
-                                    <a href="{{ path('update_actuality',{'id':actuality.id}) }}">MODIFIER</a>
-                                </td>
-                                <td>
-                                    <a href="{{ path('delete_actuality',{'id':actuality.id}) }}">SUPPRIMER</a>
+                                    <a href="{{ path('delete_scene',{'id':scene.id}) }}" class="action-bouton">SUPPRIMER</a>
                                 </td>
                             </tr>
                         </table>

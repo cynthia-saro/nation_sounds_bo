@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Rencontre les artistes{% endblock %}
+{% block title %}Séances artistes{% endblock %}
 
 {% block body %}
+ 
     <div class="navbar">
         <a href="{{ path('artists') }}">Les artistes</a>
         <a href="{{ path('securityinfos') }}">Les infos de sécurités</a>
@@ -11,35 +12,37 @@
         <a href="{{ path('seances_artists') }}">Les séances</a> 
         <a href="{{ path('meet_artists') }}">Les rencontres</a> 
     </div>
- 
-    <h1>Les rencontres avec les artistes</h1>
-    <a href="{{path('new_meet_artist')}}">Ajouter une rencontre</a>
+
+    <h1>Séances des artistes</h1>
+    <a href="{{path('new_seance_artist')}}">Ajouter une séance</a>
     <table>
         <thead>
             <tr>
                 <td>Artiste</td>
-                <td>Date début</td>
-                <td>Date fin</td>
+                <td>Heure début</td>
+                <td>Heure fin</td>
+                <td>Date</td>
                 <td>Actions</td>
             </tr>
         </thead>
         <tbody>
-            {% for meet_artist in meet_artists %}
+            {% for seance_artist in seance_artists %}
                 <tr>
-                    <td>{{meet_artist.artist.name}}</td>
-                    <td>{{meet_artist.beginning|date('d/m/Y H:i')}}</td>
-                    <td>{{meet_artist.ending|date('d/m/Y H:i')}}</td>
+                    <td>{{seance_artist.artist.name}}</td>
+                    <td>{{seance_artist.beginning|date('H:i')}}</td>
+                    <td>{{seance_artist.ending|date(' H:i')}}</td>
+                    <td>{{seance_artist.date|date('d/m/Y')}}</td>
                     <td>
                         <table>
                             <tr>
                                 <td>
-                                    <a href="{{ path('details_meet',{'id': meet_artist.id}) }}">DETAIL</a>
+                                    <a href="{{ path('seance_details',{'id': seance_artist.id}) }}">DETAIL</a>
                                 </td>
                                 <td>
-                                    <a href="{{ path('update_meet_artist',{'id':meet_artist.id}) }}">MODIFIER</a>
+                                    <a href="{{ path('update_seance_artist',{'id':seance_artist.id}) }}">MODIFIER</a>
                                 </td>
                                 <td>
-                                    <a href="{{ path('delete_meet_artist',{'id':meet_artist.id}) }}">SUPPRIMER</a>
+                                    <a href="{{ path('delete_seance_artist',{'id':seance_artist.id}) }}">SUPPRIMER</a>
                                 </td>
                             </tr>
                         </table>
