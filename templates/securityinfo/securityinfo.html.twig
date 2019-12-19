@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Informations de sécurité{% endblock %}
+
+{% block body %}
+    <h1> Titre : {{securityinfo.title}}</h1>
+    <h1> Description : {{securityinfo.description}}</h1>
+    <a href="{{ path('securityinfos') }}">Retour</a>
+{% endblock %}

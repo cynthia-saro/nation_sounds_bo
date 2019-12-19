@@ -23,7 +23,7 @@ class SecurityInfoController extends AbstractController
 
         $securityinfos=$repository->findAll();
 
-        return $this->render('securityinfo/list-securityinfos.html.twig', [
+        return $this->render('securityinfo/list_securityinfo.html.twig', [
             'securityinfos' => $securityinfos,
         ]);
     }
@@ -126,7 +126,7 @@ class SecurityInfoController extends AbstractController
             return $this->redirectToRoute('securityinfo',array('id'=>$securityinfo->getId()));
         }
 
-        return $this->render('securityinfo/securityinfo.html.twig',[
+        return $this->render('securityinfo/new_securityinfo.html.twig',[
             'securityinfoform'=>$securityinfoform->createView()
         ]);
     }
