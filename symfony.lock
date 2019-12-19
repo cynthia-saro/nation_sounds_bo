@@ -88,7 +88,7 @@
         "version": "2.2.3"
     },
     "php": {
-        "version": "7.2"
+        "version": "7.3"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -98,6 +98,9 @@
     },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "symfony/asset": {
+        "version": "v4.4.1"
     },
     "symfony/cache": {
         "version": "v4.4.1"

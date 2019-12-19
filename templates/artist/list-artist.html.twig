@@ -4,11 +4,11 @@
 
 {% block body %}
 
-<a href="{{path('new_artist')}}">Ajouter un artiste</a>
-    <h1>Les artistes</h1>
+<a href="{{path('new_artist')}}" class="submit-artist">Ajouter un artiste</a>
+    <h1 class="h1-artist">Les artistes</h1>
     <table>
         <thead>
-            <tr>
+            <tr class="title-artist">
                 <td>Nom</td>
                 <td>Photo</td>
                 <td>Description</td>
@@ -19,21 +19,21 @@
         <tbody>
             {% for artist in artists %}
                 <tr>
-                    <td>{{artist.name}}</td>
-                    <td> <img src="{{artist.picture}}"></td>
-                    <td>{{artist.description}}</td>
+                    <td class="artist-name">{{artist.name}}</td>
+                    <td> <img src="{{artist.picture}}" class="artist-img"></td>
+                    <td class="description-artist">{{artist.description}}</td>
                     <td>{{artist.category}}</td>
                     <td>
-                        <table>
-                            <tr>
+                        <table class="action-bouton">
+                            <tr class="action-bouton">
                                 <td>
-                                    <a href="{{ path('artist',{'id': artist.id}) }}">DETAIL</a>
+                                    <a href="{{ path('artist',{'id': artist.id}) }}" class="action-bouton">DETAIL</a>
                                 </td>
                                 <td>
-                                    <a href="{{ path('update_artist',{'id':artist.id}) }}">MODIFIER</a>
+                                    <a href="{{ path('update_artist',{'id':artist.id}) }}" class="action-bouton">MODIFIER</a>
                                 </td>
                                 <td>
-                                    <a href="{{ path('delete_artist',{'id':artist.id}) }}">SUPPRIMER</a>
+                                    <a href="{{ path('delete_artist',{'id':artist.id}) }}" class="action-bouton">SUPPRIMER</a>
                                 </td>
                             </tr>
                         </table>

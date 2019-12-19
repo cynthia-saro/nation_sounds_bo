@@ -7,6 +7,7 @@
 
     <h1>Nouvel Artiste</h1>
 
+<div class="new-artist">
     {# décomposition par ligne #}
     {{ form_start(artistform) }}
 
@@ -26,11 +27,11 @@
         {{ form_widget(artistform.description) }}
         {{ form_errors(artistform.description) }}
 
-       
-        <button type="submit">Envoyer</button>
+    </div>
+        <button type="submit" class="submit">Envoyer</button>
     {{ form_end(artistform) }}
 
-    <input type="button" value="Retour" onclick="history.back()">
+    <input type="button" value="Retour" onclick="history.back()" class="submit">
 
 
 {% endblock %}

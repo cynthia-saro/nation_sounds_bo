@@ -1,0 +1,170 @@
+/* 
+
+        Page de Connexion 
+
+*/
+    
+    .body-connexion {
+        position: relative;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .connexion-h1 {
+        width: 760px;
+        font-family: "Montserrat",sans-serif;
+    }
+    
+    .formulaire-connexion {
+        font-family: "Montserrat",sans-serif;
+        color: currentColor;
+        width: 100%;
+        border: 5px;
+        height: 1.1875em;
+        margin-left: 200px;
+        display: block;
+        padding: 6px 0 7px;
+        min-width: 0;
+        background: none;
+        box-sizing: content-box;
+        animation-name: MuiInputBase-keyframes-auto-fill-cancel;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .submit-connexion {
+        text-align:left;
+        color: rgba(0, 0, 0, 0.92);
+        padding: 6px 16px;
+        font-size: 0.875rem;
+        min-width: 64px;
+        box-sizing: border-box;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-family: Montserrat;
+        font-weight: 700;
+        line-height: 1.5rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+
+
+
+
+
+
+/* 
+
+        Page Artistes 
+
+*/
+
+table {
+
+    background-color: cadetblue;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+td {
+    border: 1px solid black;
+}
+
+.artist-img {
+    width: 250px;
+    height: 150px;
+}
+
+.submit-artist {
+    text-align:left;
+        color: rgba(0, 0, 0, 0.92);
+        padding: 6px 16px;
+        font-size: 0.875rem;
+        min-width: 64px;
+        border: 1px solid black;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-family: Montserrat;
+        font-weight: 700;
+        line-height: 1.5rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+}
+
+
+.artist-name  {
+    font-weight: bold;
+    padding : 20px;
+}
+
+.title-artist {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.h1-artist {
+        font-family: "Montserrat",sans-serif;
+        color: currentColor;
+        width: 100%;
+        border: 5px;
+        height: 1.1875em;
+        margin-left: 200px;
+        display: block;
+        padding: 6px 0 7px;
+        min-width: 0;
+        background: none;
+        box-sizing: content-box;
+        text-decoration:underline;
+}
+
+.action-bouton {
+        font-size: 20px;
+        padding : 10px;
+        color: darkblue;
+}
+
+.description-artist {
+        font-weight: bolder ;
+        padding : 20px;
+        width: 100%;
+}
+
+
+/*
+
+Page New Artist
+
+*/
+
+.submit {
+    text-align:left;
+        color: rgba(0, 0, 0, 0.92);
+        padding: 6px 16px;
+        font-size: 0.875rem;
+        min-width: 64px;
+        box-sizing: border-box;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-family: Montserrat;
+        font-weight: 700;
+        line-height: 1.5rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+}
+
+.new-artist {
+    font-family: "Montserrat",sans-serif;
+        color: currentColor;
+        width: 100%;
+        border: 5px;
+        height: 1.1875em;
+        margin: 50px;
+        display: block;
+        padding: 6px 0 7px;
+        min-width: 0;
+        background: none;
+        box-sizing: content-box;
+        animation-name: MuiInputBase-keyframes-auto-fill-cancel;
+        -webkit-tap-highlight-color: transparent;
+        white-space:normal;border:2px solid;
+}
