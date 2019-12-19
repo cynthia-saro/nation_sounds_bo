@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Informations de sécurité{% endblock %}
+
+{% block body %}
+<a href="{{path('new_securityinfo')}}">Ajouter une info de sécurité</a>
+    <h1>Les infos :</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Titre</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for securityinfo in securityinfos %}
+                <tr>
+                    <td>{{securityinfo.title}}</td>
+                    <td>{{securityinfo.description}}</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="{{ path('securityinfo',{'id': securityinfo.id}) }}">DETAIL</a>
+                                </td>
+                                <td>
+                                    <a href="{{ path('update_securityinfo',{'id':securityinfo.id}) }}">MODIFIER</a>
+                                </td>
+                                <td>
+                                    <a href="{{ path('delete_securityinfo',{'id':securityinfo.id}) }}">SUPPRIMER</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

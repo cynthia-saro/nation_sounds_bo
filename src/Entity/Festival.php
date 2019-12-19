@@ -67,12 +67,12 @@ class Festival
 
     public function getDates(): ?string
     {
-        return $this->date;
+        return $this->dates;
     }
 
     public function setDates(string $dates): self
     {
-        $this->date = $dates;
+        $this->dates = $dates;
 
         return $this;
     }

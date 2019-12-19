@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel information de sécurité{% endblock %}
+
+{% block body %}
+    <h1>Nouvel information de sécurité</h1>
+
+    {# décomposition par ligne #}
+    {{ form_start(securityinfoform) }}
+
+        {{ form_label(securityinfoform.title) }}
+        {{ form_widget(securityinfoform.title) }}
+        {{ form_errors(securityinfoform.title) }}
+
+        {{ form_label(securityinfoform.description) }}
+        {{ form_widget(securityinfoform.description) }}
+        {{ form_errors(securityinfoform.description) }}
+       
+        <button type="submit">Envoyer</button>
+    {{ form_end(securityinfoform) }}
+
+    <input type="button" value="Retour" onclick="history.back()">
+{% endblock %}

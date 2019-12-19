@@ -26,11 +26,6 @@ class SecurityInfo
      */
     private $description;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $link;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -56,18 +51,6 @@ class SecurityInfo
     public function setDescription(string $description): self
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    public function getLink(): ?string
-    {
-        return $this->link;
-    }
-
-    public function setLink(string $link): self
-    {
-        $this->link = $link;
 
         return $this;
     }
