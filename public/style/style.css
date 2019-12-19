@@ -167,6 +167,52 @@ td {
 }
 
 
+/* ________________________________________________________________________ */
+
+/*
+
+Page d'inscription
+
+
+*/
+
+
+.form-register {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.username-inscription{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.mail-inscription{
+    padding-top: 20px;
+}
+
+.password-inscription{
+    padding-top: 20px;
+}
+
+.confirmpsw-inscription {
+    padding-top: 20px;
+}
+
+.title-inscription {
+    width: 760px;
+    font-family: "Montserrat",sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
 
 /* ________________________________________________________________________ */
 

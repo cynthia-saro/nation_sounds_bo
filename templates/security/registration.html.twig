@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Inscription d'un utilisateur</h1>
+    <h1 class="title-inscription">Inscription d'un utilisateur</h1>
 
+<div class="form-register">
     {{ form_start(form) }}
-    {{ form_row(form.username, {'label':'Nom d\'utilisateur','attr':{'placeholder':'Nom d\'utilisateur'}}) }}
-    {{ form_row(form.email, {'label':'Adresse email','attr':{'placeholder':'Adresse email'}}) }}
-    {{ form_row(form.password, {'label':'Mot de passe','attr':{'placeholder':'Mot de passe'}}) }}
-    {{ form_row(form.confirm_password, {'label':'Confirmation du mot de passe','attr':{'placeholder':'Confirmation du mot de passe'}}) }}
+   <div class="username-inscription"> {{ form_row(form.username, {'label':'Nom d\'utilisateur : ','attr':{'placeholder':'Nom d\'utilisateur'}}) }}
+    <div class="mail-inscription">{{ form_row(form.email, {'label':'Adresse email : ','attr':{'placeholder':'Adresse email'}}) }}
+    <div class="password-inscription">{{ form_row(form.password, {'label':'Mot de passe : ','attr':{'placeholder':'Mot de passe'}}) }}
+    <div class="confirmpsw-inscription">{{ form_row(form.confirm_password, {'label':'Confirmation du mot de passe : ','attr':{'placeholder':'Confirmation'}}) }}
     <button type="submit">Inscription !</button>
-    {{ form_end(form) }}
+    <div class=" ">{{ form_end(form) }}
+</div>
 {% endblock %}
