@@ -26,24 +26,6 @@ class MeetingController extends AbstractController
 
         return new JsonResponse($meetings);
     }
-    
-    /**
-     * @Route("/meet_artists/json", name="meet_artists_json")
-     */
-    public function meet_artists_json()
-    {
-        $repository = $this
-        ->getDoctrine()
-        ->getManager()
-        ->getRepository('App:Meeting')
-        ;
-        
-        $meet_artists=$repository->findAll();
-
-        return $this->json([
-            'meet_artists' => $meet_artists,
-        ]);
-    }
 
     /**
      * @Route("/meet_artists", name="meet_artists")
