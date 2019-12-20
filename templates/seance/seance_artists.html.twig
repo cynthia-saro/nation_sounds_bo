@@ -19,6 +19,7 @@
         <thead>
             <tr>
                 <td>Artiste</td>
+                <td>Scène</td>
                 <td>Heure début</td>
                 <td>Heure fin</td>
                 <td>Date</td>
@@ -29,6 +30,7 @@
             {% for seance_artist in seance_artists %}
                 <tr>
                     <td>{{seance_artist.artist.name}}</td>
+                    <td>{{seance_artist.idScene.name}}</td>
                     <td>{{seance_artist.beginning|date('H:i')}}</td>
                     <td>{{seance_artist.ending|date(' H:i')}}</td>
                     <td>{{seance_artist.date|date('d/m/Y')}}</td>
