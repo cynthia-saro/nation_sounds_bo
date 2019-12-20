@@ -23,17 +23,16 @@ class ArtistController extends AbstractController
 
         $artists=$repository->findAllArray();
 
-        // return $this->json([
-        //     'artists' => $artists,
-        //     ],
-        //     200,
-        //     [
-        //         "content-type"=>"application/json",
-        //         'Access-Control-Allow-Origin' => '*',
-        //     ]
-        // );
-        // return new Response(json_encode($restresult), Response::HTTP_OK);
-        return new JsonResponse($artists);
+        return $this->json([
+            'artists' => $artists,
+            ],
+            200,
+            [
+                "content-type"=>"application/json",
+                'Access-Control-Allow-Origin' => '*',
+            ]
+        );
+        // return new JsonResponse($artists);
     }
 
     /**
