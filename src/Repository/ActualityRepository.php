@@ -19,6 +19,13 @@ class ActualityRepository extends ServiceEntityRepository
         parent::__construct($registry, Actuality::class);
     }
 
+    public function findAllArray()
+    {
+        $qb = $this
+            ->createQueryBuilder('u')
+            ->select('u');
+        return $qb->getQuery()->getArrayResult();
+    }
     // /**
     //  * @return Actuality[] Returns an array of Actuality objects
     //  */

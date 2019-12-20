@@ -7,10 +7,25 @@ use App\Form\SecurityInfoType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SecurityInfoController extends AbstractController
 {
+    /**
+     * @Route("/json/securityinfos", name="securityinfos_json")
+     */
+    public function securityinfos_json(){
+        $repository = $this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('App:SecurityInfo');
+
+        $securityinfos=$repository->findAllArray();
+
+        return new JsonResponse($securityinfos);
+    }
+
     /**
      * @Route("/securityinfos", name="securityinfos")
      */

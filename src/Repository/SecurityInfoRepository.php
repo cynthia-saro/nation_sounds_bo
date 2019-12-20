@@ -19,6 +19,13 @@ class SecurityInfoRepository extends ServiceEntityRepository
         parent::__construct($registry, SecurityInfo::class);
     }
 
+    public function findAllArray()
+    {
+        $qb = $this
+            ->createQueryBuilder('u')
+            ->select('u');
+        return $qb->getQuery()->getArrayResult();
+    }
     // /**
     //  * @return SecurityInfo[] Returns an array of SecurityInfo objects
     //  */

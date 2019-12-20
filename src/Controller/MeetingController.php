@@ -7,10 +7,26 @@ use App\Form\MeetingType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MeetingController extends AbstractController
 {
+
+    /**
+     * @Route("/json/meetings", name="meetings_json")
+     */
+    public function meetings_json(){
+        $repository = $this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('App:Meeting');
+
+        $meetings=$repository->findAllArray();
+
+        return new JsonResponse($meetings);
+    }
+    
     /**
      * @Route("/meet_artists/json", name="meet_artists_json")
      */

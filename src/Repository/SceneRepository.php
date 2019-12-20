@@ -19,6 +19,13 @@ class SceneRepository extends ServiceEntityRepository
         parent::__construct($registry, Scene::class);
     }
 
+    public function findAllArray()
+    {
+        $qb = $this
+            ->createQueryBuilder('u')
+            ->select('u');
+        return $qb->getQuery()->getArrayResult();
+    }
     // /**
     //  * @return Scene[] Returns an array of Scene objects
     //  */

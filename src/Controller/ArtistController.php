@@ -7,10 +7,35 @@ use App\Form\ArtistType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ArtistController extends AbstractController
 {
+    /**
+     * @Route("/json/artists", name="artists_json")
+     */
+    public function artists_json(){
+        $repository = $this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('App:Artist');
+
+        $artists=$repository->findAllArray();
+
+        // return $this->json([
+        //     'artists' => $artists,
+        //     ],
+        //     200,
+        //     [
+        //         "content-type"=>"application/json",
+        //         'Access-Control-Allow-Origin' => '*',
+        //     ]
+        // );
+        // return new Response(json_encode($restresult), Response::HTTP_OK);
+        return new JsonResponse($artists);
+    }
+
     /**
      * @Route("/artists", name="artists")
      */

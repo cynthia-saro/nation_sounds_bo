@@ -7,10 +7,25 @@ use App\Form\SeanceType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SeanceController extends AbstractController
 {
+    /**
+     * @Route("/json/seances", name="seances_json")
+     */
+    public function seances_json(){
+        $repository = $this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('App:Seance');
+
+        $seances=$repository->findAllArray();
+
+        return new JsonResponse($seances);
+    }
+
     /**
      * @Route("/seances_artists/json", name="seances_artists_json")
      */

@@ -7,10 +7,26 @@ use App\Form\SceneType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SceneController extends AbstractController
 {
+
+    /**
+     * @Route("/json/scenes", name="scenes_json")
+     */
+    public function scenes_json(){
+        $repository = $this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('App:Scene');
+
+        $scenes=$repository->findAllArray();
+
+        return new JsonResponse($scenes);
+    }
+
     /**
      * @Route("/scenes", name="scenes")
      */

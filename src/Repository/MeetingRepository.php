@@ -19,6 +19,13 @@ class MeetingRepository extends ServiceEntityRepository
         parent::__construct($registry, Meeting::class);
     }
 
+    public function findAllArray()
+    {
+        $qb = $this
+            ->createQueryBuilder('u')
+            ->select('u');
+        return $qb->getQuery()->getArrayResult();
+    }
     // /**
     //  * @return Meeting[] Returns an array of Meeting objects
     //  */

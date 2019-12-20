@@ -7,10 +7,25 @@ use App\Form\ActualityType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ActualityController extends AbstractController
 {
+    /**
+     * @Route("/json/actualities", name="actualities_json")
+     */
+    public function actualities_json(){
+        $repository = $this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('App:Actuality');
+
+        $actualities=$repository->findAllArray();
+
+        return new JsonResponse($actualities);
+    }
+
     /**
      * @Route("/actualities", name="actualities")
      */
