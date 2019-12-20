@@ -23,7 +23,15 @@ class SeanceController extends AbstractController
 
         $seances=$repository->findAllArray();
 
-        return new JsonResponse($seances);
+        return $this->json([
+            'seances' => $seances,
+            ],
+            200,
+            [
+                "content-type"=>"application/json",
+                'Access-Control-Allow-Origin' => '*',
+            ]
+        );
     }
 
     /**

@@ -24,7 +24,15 @@ class MeetingController extends AbstractController
 
         $meetings=$repository->findAllArray();
 
-        return new JsonResponse($meetings);
+        return $this->json([
+            'meetings' => $meetings,
+            ],
+            200,
+            [
+                "content-type"=>"application/json",
+                'Access-Control-Allow-Origin' => '*',
+            ]
+        );
     }
 
     /**

@@ -23,7 +23,15 @@ class ActualityController extends AbstractController
 
         $actualities=$repository->findAllArray();
 
-        return new JsonResponse($actualities);
+        return $this->json([
+            'actualities' => $actualities,
+            ],
+            200,
+            [
+                "content-type"=>"application/json",
+                'Access-Control-Allow-Origin' => '*',
+            ]
+        );
     }
 
     /**

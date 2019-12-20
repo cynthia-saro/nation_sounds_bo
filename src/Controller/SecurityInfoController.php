@@ -23,7 +23,15 @@ class SecurityInfoController extends AbstractController
 
         $securityinfos=$repository->findAllArray();
 
-        return new JsonResponse($securityinfos);
+        return $this->json([
+            'securityinfos' => $securityinfos,
+            ],
+            200,
+            [
+                "content-type"=>"application/json",
+                'Access-Control-Allow-Origin' => '*',
+            ]
+        );
     }
 
     /**

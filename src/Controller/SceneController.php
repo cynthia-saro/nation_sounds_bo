@@ -24,7 +24,15 @@ class SceneController extends AbstractController
 
         $scenes=$repository->findAllArray();
 
-        return new JsonResponse($scenes);
+        return $this->json([
+            'scenes' => $scenes,
+            ],
+            200,
+            [
+                "content-type"=>"application/json",
+                'Access-Control-Allow-Origin' => '*',
+            ]
+        );
     }
 
     /**
